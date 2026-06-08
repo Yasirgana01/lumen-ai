@@ -11,6 +11,12 @@ export default defineConfig({
     tsconfigPaths(),
     tanstackStart({
       server: { entry: "server" },
+      spa: {
+        enabled: true,
+        prerender: {
+          outputPath: "/index.html",
+        },
+      },
     }),
     react(),
     tailwindcss(),
